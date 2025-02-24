@@ -1,8 +1,10 @@
 import { terminal } from "terminal-kit";
 import Fusca from "./fusca";
+import Carro from "./Carro";
 
-export default function coridda() {
-    const carro = new Fusca()
+export default function corrida(carro: Carro) {
+    // Tirando a depedencia explicita de uma classe concreta
+    // const carro = new Fusca()
 
     Array.from({length: 10}).forEach(() => {
         carro.acelerar()
