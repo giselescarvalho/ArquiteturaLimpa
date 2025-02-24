@@ -3,6 +3,7 @@ import Fusca from "../core/fundamentos/fusca";
 import Ferrari from "../core/fundamentos/Ferrari";
 import Carro from "../core/fundamentos/Carro";
 import corrida from "../core/fundamentos/corrida";
+import { terminal } from "terminal-kit";
 
 export default async function dip (){
     TerminalUtil.titulo('DIP')
@@ -19,6 +20,6 @@ export default async function dip (){
 
 
     }
-    corrida(carro)
+    corrida(carro, terminal.red)
     await TerminalUtil.esperarEnter()
 }
