@@ -8,7 +8,9 @@ interface RegistrarUsuarioEntrada{
 }
 
 export default class RegistrarUsuario implements CasoDeUso<RegistrarUsuarioEntrada, void>{
-    async executar(entrada: RegistrarUsuarioEntrada): Promise<void> {
-        entrada.valor
+    async executar(usuario: Usuario): Promise<void> {
+       const senhaCriptografada= usuario.senha.split('').reverse().join()
+        console.log(senhaCriptografada)
+        
     }
 }
